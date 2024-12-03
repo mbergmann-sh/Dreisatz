@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>276</width>
+    <height>221</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dreisatz-Rechner</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="dreisatz.qrc">
+    <normaloff>:/icons/accessories-calculator-3.ico</normaloff>:/icons/accessories-calculator-3.ico</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_4">
+    <item row="0" column="0" colspan="2">
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="labelTitle">
+        <property name="font">
+         <font>
+          <family>Rundkursiv</family>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Dreisatz berechnen</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="0" colspan="2">
+     <widget class="QGroupBox" name="groupBox">
+      <property name="title">
+       <string/>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="0" column="0">
+        <layout class="QGridLayout" name="gridLayout_2">
+         <item row="0" column="0">
+          <widget class="QDoubleSpinBox" name="dspField1">
+           <property name="statusTip">
+            <string>Positiven Wert eingeben oder 0 für Wertsuche</string>
+           </property>
+           <property name="decimals">
+            <number>4</number>
+           </property>
+           <property name="maximum">
+            <double>99999.990000000005239</double>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string>entspricht</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QDoubleSpinBox" name="dspField2">
+           <property name="statusTip">
+            <string>Positiven Wert eingeben oder 0 für Wertsuche</string>
+           </property>
+           <property name="decimals">
+            <number>4</number>
+           </property>
+           <property name="maximum">
+            <double>99999.990000000005239</double>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QDoubleSpinBox" name="dspField3">
+           <property name="statusTip">
+            <string>Positiven Wert eingeben oder 0 für Wertsuche</string>
+           </property>
+           <property name="decimals">
+            <number>4</number>
+           </property>
+           <property name="maximum">
+            <double>99999.990000000005239</double>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLabel" name="label_3">
+           <property name="text">
+            <string>entspricht</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QDoubleSpinBox" name="dspField4">
+           <property name="statusTip">
+            <string>Positiven Wert eingeben oder 0 für Wertsuche</string>
+           </property>
+           <property name="decimals">
+            <number>4</number>
+           </property>
+           <property name="maximum">
+            <double>99999.990000000005239</double>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="1" column="0">
+        <widget class="QComboBox" name="cbxDreisatzType">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700; font-style:italic;&quot;&gt;Proportionaler Dreisatz:&lt;/span&gt;&lt;br/&gt;Beide Werte wachsen&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700; font-style:italic;&quot;&gt;Antiproportionaler Dreisatz&lt;/span&gt;: &lt;br/&gt;Wenn eine Größe wächst, verringert sich die Andere&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="statusTip">
+          <string>Proportional oder antiproportional?</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>Proportionaler Dreisatz</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Antiproportionaler Dreisatz</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QPushButton" name="btnSolution">
+      <property name="statusTip">
+       <string>Lösungsweg erklären</string>
+      </property>
+      <property name="text">
+       <string>Lösungsweg...</string>
+      </property>
+      <property name="icon">
+       <iconset resource="dreisatz.qrc">
+        <normaloff>:/icons/emblem-notice.ico</normaloff>:/icons/emblem-notice.ico</iconset>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QPushButton" name="btnCalc">
+      <property name="statusTip">
+       <string>Fehlende Größe berechnen</string>
+      </property>
+      <property name="text">
+       <string>Berech&amp;nen</string>
+      </property>
+      <property name="icon">
+       <iconset resource="dreisatz.qrc">
+        <normaloff>:/icons/checkbox-2.ico</normaloff>:/icons/checkbox-2.ico</iconset>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>276</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuProjekt">
+    <property name="title">
+     <string>Projekt</string>
+    </property>
+    <addaction name="actionNeue_Berechnung"/>
+    <addaction name="separator"/>
+    <addaction name="actionBerechnen"/>
+    <addaction name="actionSolution"/>
+    <addaction name="separator"/>
+    <addaction name="actionProgramm_beenden"/>
+   </widget>
+   <widget class="QMenu" name="menuHilfe">
+    <property name="title">
+     <string>Hilfe</string>
+    </property>
+    <addaction name="actionDreisatz"/>
+    <addaction name="separator"/>
+    <addaction name="action_About"/>
+    <addaction name="action_AboutQt"/>
+   </widget>
+   <addaction name="menuProjekt"/>
+   <addaction name="menuHilfe"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionNeue_Berechnung">
+   <property name="text">
+    <string>Neue Berechnung</string>
+   </property>
+   <property name="statusTip">
+    <string>Alle Werte zurücksetzen</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionProgramm_beenden">
+   <property name="icon">
+    <iconset resource="dreisatz.qrc">
+     <normaloff>:/icons/application-exit.ico</normaloff>:/icons/application-exit.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Programm beenden</string>
+   </property>
+   <property name="statusTip">
+    <string>Programm beenden?</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionDreisatz">
+   <property name="icon">
+    <iconset resource="dreisatz.qrc">
+     <normaloff>:/icons/address-book-new-2.ico</normaloff>:/icons/address-book-new-2.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Dreisatz...</string>
+   </property>
+   <property name="statusTip">
+    <string>Grundlagen zum Dreisatz</string>
+   </property>
+   <property name="shortcut">
+    <string>F1</string>
+   </property>
+  </action>
+  <action name="action_About">
+   <property name="text">
+    <string>Über das Program...</string>
+   </property>
+   <property name="statusTip">
+    <string>über Dreisatz Rechner...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+A</string>
+   </property>
+  </action>
+  <action name="action_AboutQt">
+   <property name="text">
+    <string>Über Qt...</string>
+   </property>
+   <property name="statusTip">
+    <string>über Qt...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+T</string>
+   </property>
+  </action>
+  <action name="actionSolution">
+   <property name="icon">
+    <iconset resource="dreisatz.qrc">
+     <normaloff>:/icons/emblem-notice.ico</normaloff>:/icons/emblem-notice.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Lösungsweg...</string>
+   </property>
+   <property name="statusTip">
+    <string>Lösungsweg erklären</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+L</string>
+   </property>
+  </action>
+  <action name="actionBerechnen">
+   <property name="icon">
+    <iconset resource="dreisatz.qrc">
+     <normaloff>:/icons/checkbox-2.ico</normaloff>:/icons/checkbox-2.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Berechnen</string>
+   </property>
+   <property name="statusTip">
+    <string>Fehlenden Bezug berechnen</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="dreisatz.qrc"/>
+ </resources>
+ <connections/>
+</ui>
